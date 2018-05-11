@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: #333;
+    --bg-color: #6fce47;
+}
+
+@custom-selector :--heading h1,
+h2,
+h3,
+h4,
+h5,
+h6;
+:--heading {
+    font-weight: bold;
+    color: red;
+}
+
+.layout a {
+    transition: all .5s;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+        color: var(--bg-color);
+    }
+}
+
+.layout {
+    width: 1000px;
+    margin: 0 auto;
+    font: normal 14px/18px microsoft yahei;
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+
+/*babyNav*/
+
+.babynav {
+    background: var(--bg-color);
+    & a {
+        height: 44px;
+        padding: 0 27px;
+        font-size: 16px;
+        line-height: 44px;
+        display: inline-block;
+        color: #fff;
+        &:hover {
+            background: #fefefe;
+            color: var(--text-color);
+        }
+    }
+}
+
+.left-box {
+    display: flex;
+}

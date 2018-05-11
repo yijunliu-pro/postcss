@@ -1,0 +1,37 @@
+1、安装postcss-loader
+
+插件：
+1、autoprefixer插件，自动添加浏览器前缀
+2、postcss-cssnext，支持未来的css属性，负责把新特性转译称当前浏览器可以使用的语法，此插件中已经包含了autoprefixer插件的功能。
+    1、自定义属性和变量
+        :root {
+            --text-color: #333;
+            --bg-color: #6fce47;
+        }
+        .text{
+            color: var(--text-color);
+        }
+
+    2、自定义选择器
+        @custom-selector: --heading h2,h3,h4;
+        :--heading {
+            font-size: 16px;
+            color: red;
+        }
+
+    3、样式嵌套
+        .babynav {
+            background: var(--bg-color);
+            & a {
+                height: 44px;
+                padding: 0 27px;
+                font-size: 16px;
+                line-height: 44px;
+                display: inline-block;
+                color: #fff;
+                &:hover {
+                    background: #fefefe;
+                    color: var(--text-color);
+                }
+            }
+        }
