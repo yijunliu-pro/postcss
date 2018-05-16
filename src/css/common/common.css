@@ -1,0 +1,103 @@
+body {
+    font: 14px/18px Simsun, Helvetica, Arial, sans-serif;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+textarea,
+p,
+th,
+td,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+input,
+label,
+select,
+option,
+textarea,
+button {
+    font: 12px/18px Simsun, Helvetica, Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+textarea {
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    &:hover {
+        text-decoration: underline;
+        color: #BD0A01;
+    }
+}
+
+::selection {
+    background-color: #669900;
+    color: #FFFFFF;
+}
+
+::-moz-selection {
+    background-color: #669900;
+    color: #FFFFFF;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.dis {
+    display: block;
+}
+
+.undis {
+    display: none;
+}

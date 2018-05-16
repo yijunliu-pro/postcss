@@ -1,0 +1,13 @@
+:root {
+    --text-color: #333;
+    --bg-color-nav:#333;
+    --bg-color: #dedede;
+}
+/* @define-mixin icon $name {
+    padding-left: 16px;
+    &::after {
+        content: "";
+        background-url: url(../../sprits/images/$(name).png);
+    }
+} */
+

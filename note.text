@@ -1,8 +1,20 @@
+让.css文件支持postcss语法
+1、安装vs code里的插件postcss-sugarss-language
+2、去【用户设置】里手动添加
+    "files.associations": {
+        "*.css": "postcss"
+    }
+
+
+注意：引入插件有顺序要求
+
+
 1、安装postcss-loader
 
 插件：
-1、autoprefixer插件，自动添加浏览器前缀
-2、postcss-cssnext，支持未来的css属性，负责把新特性转译称当前浏览器可以使用的语法，此插件中已经包含了autoprefixer插件的功能。
+1、autoprefixer插件，自动添加浏览器前缀；
+2、postcss-import，支持import css文件；
+3、postcss-cssnext，支持未来的css属性，负责把新特性转译称当前浏览器可以使用的语法，此插件中已经包含了autoprefixer插件的功能。
     1、自定义属性和变量
         :root {
             --text-color: #333;

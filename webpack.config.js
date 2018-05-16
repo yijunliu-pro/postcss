@@ -25,24 +25,27 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.css$/,
-                loader: ['style-loader', 'css-loader', 'postcss-loader']
-                    // use: [
-                    //         'style-loader',
-                    //         { loader: 'css-loader', options: { importLoaders: 1 } },
-                    //         {
-                    //             loader: 'postcss-loader',
-                    //             // options: {
-                    //             //     ident: 'postcss',
-                    //             //     plugins: () => [
-                    //             //         postcssPresetEnv( /* options */ )
-                    //             //     ]
-                    //             // }
-                    //         }
-                    //     ]
-                    // use: ExtractTextWebapckPlugin.extract({
-                    //         use: 'css-loader!postcss-loader',
-                    //         publicPath: '../' //解决css背景图的路径问题
-                    //     }) //不再需要style-loader
+                //loader: ['style-loader', 'css-loader', 'postcss-loader'], //生成页面内联样式，挂在head里的style
+                use: ExtractTextWebapckPlugin.extract({ //生成独立的css文件
+                        use: [{
+                                loader: 'css-loader',
+                                options: {
+                                    //minimize: true, //css压缩
+                                    mportLoaders: 1
+                                }
+                            },
+                            {
+                                loader: 'postcss-loader',
+                                // options: {
+                                //     ident: 'postcss',
+                                //     plugins: () => [
+                                //         postcssPresetEnv( /* options */ )
+                                //     ]
+                                // }
+                            }
+                        ],
+                        publicPath: '../' //解决css背景图的路径问题
+                    }) //不再需要style-loader
 
             },
             //img图片
@@ -95,7 +98,7 @@ module.exports = {
             }
         }),
         //生成独立的css文件，括号里要生成的css路径和名,配合着css文件使用
-        //new ExtractTextWebapckPlugin('css.css'),
+        new ExtractTextWebapckPlugin('css.css'),
         //new Webpack.HotModuleReplacementPlugin() //调用webpack的热更新插件
 
 

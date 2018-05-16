@@ -1,0 +1,17 @@
+
+@import '../common/varcommon.css';
+.nav {
+    background: var(--bg-color-nav);
+    & a {
+        height: 44px;
+        padding: 0 27px;
+        font-size: 16px;
+        line-height: 44px;
+        display: inline-block;
+        color: #fff;
+        &:hover{
+            background: #fefefe;
+            color: var(--text-color);
+        }
+    }
+}

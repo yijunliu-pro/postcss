@@ -1,24 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
+@import './common/common.css';
+@import './common/varcommon.css';
+@import './component/_nav.css';
+:root{
+    --icon: {
+        display:block;
+        width:40px;
+        height:40px;
+  }
 }
-
-:root {
-    --text-color: #333;
-    --bg-color: #6fce47;
-}
-
-@custom-selector :--heading h1,
-h2,
-h3,
-h4,
-h5,
-h6;
-:--heading {
-    font-weight: bold;
-    color: red;
-}
-
 .layout a {
     transition: all .5s;
     text-decoration: none;
@@ -29,7 +18,8 @@ h6;
 }
 
 .layout {
-    width: 1000px;
+    width: 600px;
+    /* width: 75rem; */
     margin: 0 auto;
     font: normal 14px/18px microsoft yahei;
     &:after {
@@ -38,26 +28,81 @@ h6;
         display: table;
     }
 }
+/*设置logo*/
+.logo{
+    width:235px;
+    height: 59px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: image-set(url(../images/news-logo.png) 1x,
+                                url(../images/news-logox2.png) 2x);
 
-
-/*babyNav*/
-
-.babynav {
-    background: var(--bg-color);
-    & a {
-        height: 44px;
-        padding: 0 27px;
-        font-size: 16px;
-        line-height: 44px;
-        display: inline-block;
-        color: #fff;
-        &:hover {
-            background: #fefefe;
-            color: var(--text-color);
+}
+.box1 {
+    width: 400px;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    background: #fff;
+    & ul{
+       display: flex; 
+       & li{
+            flex: 1;
+            
         }
     }
 }
+.box2{
+    width: 400px;
+    & ul{
+        display: flex;
+        & li{
+            flex: 1;
+            width: 60Px;
+            height: 60Px;
+            background: var(--bg-color);
+            border-radius: 8px;
+            &:nth-child(1){
+                & span{ 
+                   background-image: url(../images/sprites/icon1.png); 
+                }
+            }
+            &:nth-child(2){
+                & span{
+                   background-image: url(../images/sprites/icon2.png); 
+                }
+            }
+            &:nth-child(3){
+                & span{
+                   background-image: url(../images/sprites/icon3.png); 
+                }
+            }
+            & span{
+                display:block;
+                width:40Px;
+                height:40Px;
+               background-repeat: no-repeat;
+               
 
-.left-box {
-    display: flex;
+                
+            }
+        }
+
+    }
 }
+@define-mixin animaton $aniName,$from, $to {
+    @keyframes $(aniName){
+        from {
+            margin-left:$from;
+        }
+        to {
+            margin-left: $to;
+        }
+    }
+}
+.animi-box1{
+  width:50px;
+  height:20px;
+  background:#f2f2f2;
+  margin-top:10px;
+  animation:mymove 5s infinite;
+} 
