@@ -1,5 +1,5 @@
 
-@import '../common/varcommon.css';
+@import '../common/vars.css';
 .nav {
     background: var(--bg-color-nav);
     & a {

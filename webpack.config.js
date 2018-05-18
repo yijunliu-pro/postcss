@@ -2,6 +2,7 @@ var webpack = require("webpack");
 var path = require("path");
 var htmlWebpackPlugin = require("html-webpack-plugin");
 var ExtractTextWebapckPlugin = require("extract-text-webpack-plugin"); //抽离css为独立的css文件
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 // //打包时先删除旧文件插件
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 // var UglifyJsPlugin = require('uglifyjs-webpack-plugin');//js压缩插件，webpack4.0以上运行npm run build会自动压缩所以不再需要此插件
@@ -111,5 +112,17 @@ module.exports = {
                 dry: false　 //启用删除文件
             }
         ),
+
+        new StyleLintPlugin(options),
+
+        // new StyleLintPlugin({
+        //     context: "src",
+        //     configFile: path.resolve(__dirname, './stylelint.config.js'),
+        //     files: '**/*.css',
+        //     failOnError: false,
+        //     quiet: true,
+        //     syntax: 'less'
+        // })
+
     ]
 };

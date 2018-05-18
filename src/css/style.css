@@ -1,5 +1,5 @@
 @import './common/common.css';
-@import './common/varcommon.css';
+@import './common/vars.css';
 @import './component/_nav.css';
 :root{
     --icon: {
@@ -89,7 +89,7 @@
 
     }
 }
-@define-mixin animaton $aniName,$from, $to {
+  @define-mixin animaton $aniName,$from, $to {
     @keyframes $(aniName){
         from {
             margin-left:$from;
@@ -98,11 +98,13 @@
             margin-left: $to;
         }
     }
-}
+} 
+@mixin animaton mymove1,0,100px;
+
 .animi-box1{
   width:50px;
   height:20px;
   background:#f2f2f2;
   margin-top:10px;
-  animation:mymove 5s infinite;
-} 
+  animation:mymove1 5s infinite;
+}  
