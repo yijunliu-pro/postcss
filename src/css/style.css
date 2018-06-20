@@ -18,8 +18,7 @@
 }
 
 .layout {
-    width: 600px;
-    /* width: 75rem; */
+    width: 1000px;
     margin: 0 auto;
     font: normal 14px/18px microsoft yahei;
     &:after {
@@ -57,8 +56,8 @@
         display: flex;
         & li{
             flex: 1;
-            width: 60Px;
-            height: 60Px;
+            width: 60px;
+            height: 60px;
             background: var(--bg-color);
             border-radius: 8px;
             &:nth-child(1){
@@ -78,8 +77,8 @@
             }
             & span{
                 display:block;
-                width:40Px;
-                height:40Px;
+                width:40px;
+                height:40px;
                background-repeat: no-repeat;
                
 
@@ -89,17 +88,17 @@
 
     }
 }
-  @define-mixin animaton $aniName,$from, $to {
-    @keyframes $(aniName){
-        from {
-            margin-left:$from;
-        }
-        to {
+/* @define-mixin animaton $aniName,$from, $to {
+     @keyframes $(aniName){
+         from {
+             margin-left:$from;
+         }
+         to {
             margin-left: $to;
         }
-    }
-} 
-@mixin animaton mymove1,0,100px;
+     }
+ } 
+ @mixin animaton mymove1,0,100px; */
 
 .animi-box1{
   width:50px;

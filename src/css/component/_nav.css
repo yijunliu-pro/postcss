@@ -1,7 +1,7 @@
 
 @import '../common/vars.css';
 .nav {
-    background: var(--bg-color-nav);
+    background: var(--bg-color-nav,red);//red属性表示--bg-color-nav变量未被定义时备用
     & a {
         height: 44px;
         padding: 0 27px;
